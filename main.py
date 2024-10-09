@@ -8,7 +8,7 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    apiTests =  ApiTests("nome","email","senha")
+    apiTests = ApiTests("Matheus", "oqibz@example.com", "123456")
 
     apiTests.loginTest()
-    apiTests.editUser()
+    apiTests.createUserTest()
