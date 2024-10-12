@@ -1,14 +1,10 @@
 from TestApi import ApiTests
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    apiTests =  ApiTests("nome","email","senha")
+    apiTests = ApiTests("Matheus", "oqibz@example.com", "123456")
 
+    apiTests.createUserTest()
     apiTests.loginTest()
-    apiTests.editUser()
+    apiTests.deleteUserTest()
+    apiTests.editUserTest()

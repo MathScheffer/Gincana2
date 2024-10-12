@@ -1,2 +1,4 @@
 pytest
 fastapi
+"fastapi[standard]"
+pydantic
