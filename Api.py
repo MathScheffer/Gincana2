@@ -4,6 +4,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+banco = []
+
 
 class Banco:
     banco = []
