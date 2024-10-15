@@ -40,7 +40,6 @@ def getAll():
 
 @app.post("/create")
 def create(user: User):
-    print(type(user))
     if type(user) != User:
         return {"Message": "O tipo de dado enviado não é um dicionário."}
 
@@ -104,13 +103,11 @@ def edit(nome: str, obj: UserEdit):
         if v:
             Banco.banco[objIndex][k] = v
 
-
     return {"Message": "Usuario atualizado" , "Resultado": {"nome":Banco.banco[objIndex]["nome"], "email":Banco.banco[objIndex]["email"] }}
 
 
 @app.delete("/deletar")
 def delete(nome: str):
-
     for i in range(len(Banco.banco)):
         if Banco.banco[i]["nome"] == nome:
             del Banco.banco[i]
