@@ -1,6 +1,15 @@
 Rodar a fastapi:
+Crie um ambiente virtual:
+`python -m venv env`
+Rode o ambiente virtual:
+./env/Scripts/activate
+Instale as dependências:
+`pip install -r requirements.txt`
+Instale o fastapi[standar]
+`pip install "fastapi[standard]"`
 
-Com as dependêncas instaladas presentes em requirements.txt, rodar o comando `fastapi dev Api.py`
+Rode o projeto:
+`fastapi dev Api.py`
 
 ## Regras para Teste
 

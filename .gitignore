@@ -1,3 +1,3 @@
-env/
-__pycache__/
- .ipynb_checkpoints/
+env
+ __pycache__/
+ .ipynb_checkpoints copy/

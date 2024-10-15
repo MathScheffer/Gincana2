@@ -1,4 +1,0 @@
-pytest
-fastapi
-fastapi
-pydantic
