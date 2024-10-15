@@ -14,7 +14,13 @@ class ApiTests:
 
     def loginTest(self):
         Banco.banco = []
-        assert login(self.nome, self.senha) == {
+        
+
+        user= UserLogin(
+            nome= self.nome,
+            senha= self.senha
+        )
+        assert login(user) == {
             "Message": "Não há usuários cadastrados"
         }, "Teste falhou por haver usuário indesejado cadastrado."
 
@@ -24,12 +30,14 @@ class ApiTests:
             "senha": self.senha
         })
 
-        assert login(self.nome, self.senha) == {
+
+        assert login(user) == {
             "nome": self.nome,
             "senha": self.senha
         }, f'Usuário {self.nome} não encontrado.'
 
-        assert login(123, self.senha) == {
+        user.nome = 123
+        assert login(user) == {
             "Message": "O Nome deverá ser uma string"
         }, "Erro: login aceitou usuario como número."
 
